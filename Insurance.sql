@@ -73,8 +73,15 @@ insert into participated values('A01','KA052250','11','10000'),
 ('A04','KA031181','14','3000'),
 ('A05','KA041702','15','5000');
 
+/*QUERY*/
 
-
+/*List the names of Drivers whose damage is greter than the avg damage amount*/
+select person.name
+from person,participated
+where person.driver_id = participated.driver_id and damage_amount>(
+                                                                    select avg(damage_amount)
+                                                                    from participated 
+																                                                  );
 
 
 
