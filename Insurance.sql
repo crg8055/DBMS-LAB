@@ -81,7 +81,7 @@ from person,participated
 where person.driver_id = participated.driver_id and damage_amount>(
                                                                     select avg(damage_amount)
                                                                     from participated 
-																                                                  );
+								  )								                                                  );
 
 
 
