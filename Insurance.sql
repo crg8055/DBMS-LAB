@@ -73,7 +73,7 @@ insert into participated values('A01','KA052250','11','10000'),
 ('A04','KA031181','14','3000'),
 ('A05','KA041702','15','5000');
 
-/*QUERY*/
+/*QUERY-06/03/2020*/
 
 /*List the names of Drivers whose damage is greter than the avg damage amount*/
 select person.name
