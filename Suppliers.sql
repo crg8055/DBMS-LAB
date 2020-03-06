@@ -18,7 +18,7 @@ create table Catalog(
    pid int,
    cost real,
    primary key(sid,pid),
-   foreign key(sid)references Supplier(sid) on delete cascade,
+   foreign key(sid)references Suppliers(sid) on delete cascade,
    foreign key(pid)references Parts(pid) on delete cascade
 );
 
