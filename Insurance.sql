@@ -83,7 +83,14 @@ where person.driver_id = participated.driver_id and damage_amount>(
                                                                     from participated 
 								  )								                                                  );
 
+/* Update the damage amount to 25000 for the car with a specific reg_num (example 'KA053408') for which the accident report number was 12*/
+update participated
+set damage_amount=25000 
+where reg_num='KA053408' and report_num=12;
 
+/*Find the total number of people who owned cars that were involved in accidents in 2008 */
+select count(distinct driver_id) CNT from participated a, accident b
+where a.report_num=b.report_num and b.accident_date like '%08';
 
 
 
